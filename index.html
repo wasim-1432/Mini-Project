@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Abul Kalam Memorial Hospital</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <header class="main-header">
+    <img src="hospitallogo.jpg" class="logo" alt="Hospital Logo" />
+    <div class="header-text">
+      <h1>Dr. Abul Kalam Memorial Hospital</h1>
+      <p>Knowledge Park II, Greater Noida (U.P.)</p>
+    </div>
+  </header>
+
+  <main class="page-wrap">
+    <section class="container">
+
+      <form class="form-box" id="appointmentForm">
+        <div class="field">
+          <label for="doctorName">Doctor's Name</label>
+          <select id="doctorName" required>
+            <option value="Dr. Mohd Wasim" selected>Dr. Mohd Wasim</option>
+            <option value="Dr. Ojaswa Prakash">Dr. Ojaswa Prakash</option>
+            <option value="Dr. Shailendra Yadav">Dr. Shailendra Yadav</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="patientName">Patient Name</label>
+          <input type="text" id="patientName" placeholder="Enter Patient Name" required />
+        </div>
+
+        <div class="field">
+          <label for="appointmentDate">Appointment Date</label>
+          <input type="date" id="appointmentDate" required />
+        </div>
+
+        <div class="field slots-wrap">
+          <label>Select Time Slot</label>
+          <div class="slots" id="slots"></div>
+        </div>
+
+        <div class="field full">
+          <button type="button" id="bookBtn">Book Appointment & Download Slip</button>
+        </div>
+      </form>
+
+      <h2>Today's Appointments</h2>
+      <div id="appointmentList"></div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
